@@ -31,6 +31,7 @@ jobs:
             manager-desktop.png
             worker-desktop.png
             worker-mobile.png
+            manager-ipad.png
       - run: |
           mkdir site
           cp index.html base.css cuppa-shell.css preview.css preview.js navigation.json .nojekyll site/

@@ -45,3 +45,41 @@ html[dir=ltr] .sb-sec-head,html[dir=ltr] .panel-b td,html[dir=ltr] .panel-b th{t
 @media(max-width:560px){.tb{padding:8px}.tb-brand{gap:4px}.tb-actions{gap:2px}.tb-btn{font-size:11px;padding:7px}.kpis{grid-template-columns:1fr 1fr;gap:9px}.kpi{padding:13px;display:block}.kpi-ic{display:none}.kpi-val{font-size:20px}.kpi-lbl{min-height:32px;font-size:12px}.module-grid{grid-template-columns:1fr}.worker-summary{grid-template-columns:1fr;padding:20px;gap:20px}.worker-count{border-left:0;border-bottom:1px solid var(--border);padding-bottom:16px}.panel-h,.panel-b{padding:16px}.row2{gap:14px}.bar{flex-wrap:wrap}.bar .name{flex:1}.bar .track{flex-basis:100%;order:3}.home{padding:20px 14px}.brand-logo{max-width:75px}.welcome-msg>.muted{display:none}.quick-actions a{width:100%}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;scroll-behavior:auto!important}}
 @media print{.sb,.tb,.sb-overlay,.frame-tools{display:none!important}.main{margin:0;height:auto;overflow:visible}body{overflow:visible}.home{padding:0}.module-directory,.shell-footer{display:none}}
+
+/* Floating navigation and content-driven layouts, shared with the public preview. */
+:root{--shell-offset:0px;--shell-gap:18px}
+body{direction:inherit}
+.sb,html[dir=ltr] .sb{top:calc(var(--top-h) + var(--shell-offset) + var(--shell-gap));bottom:var(--shell-gap);right:auto;left:auto;inset-inline-start:var(--shell-gap);border:1px solid #ffffff15;border-radius:22px;box-shadow:0 12px 36px #24181024;overscroll-behavior:contain}
+.main,html[dir=ltr] .main{margin:calc(var(--top-h) + var(--shell-offset)) 0 0;margin-inline-start:calc(var(--side-w) + 2 * var(--shell-gap));height:calc(100vh - var(--top-h) - var(--shell-offset));height:calc(100dvh - var(--top-h) - var(--shell-offset));min-width:0;overscroll-behavior:contain;scrollbar-gutter:stable}
+.home{container-type:inline-size;padding:clamp(16px,2.4vw,36px);width:100%}
+.home>*{min-width:0}.kpis{grid-template-columns:repeat(4,minmax(0,1fr))}
+.row2{grid-template-columns:repeat(2,minmax(0,1fr))}.row2>*,.panel,.panel-b,.kpi,.module-tile{min-width:0}
+.module-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.kpi-val{font-size:clamp(20px,2vw,28px)}.home-hdr h1{font-size:clamp(23px,2.5vw,32px)}
+.module-tile{overflow-wrap:anywhere}.panel-h{gap:12px;flex-wrap:wrap}
+.sb-link,.sb-sec-head,.sb-home-link,.tb-toggle,.tb-btn{min-height:44px}
+.sb-overlay{top:calc(var(--top-h) + var(--shell-offset))}
+@container(max-width:1000px){.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.row2{grid-template-columns:1fr}.module-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@container(max-width:550px){.module-grid{grid-template-columns:1fr}.worker-summary{grid-template-columns:1fr}.worker-count{border-inline:0;border-bottom:1px solid var(--border);padding-bottom:16px}.kpi{display:block;padding:14px}.kpi-ic{display:none}.home-hdr .primary-action{width:100%;justify-content:space-between}}
+@media(max-width:1100px){
+ :root{--shell-gap:12px}
+ .tb-toggle{display:inline-flex;align-items:center;justify-content:center}
+ .tb-brand .crumb,.tb-brand .sep,.tb-user{display:none}
+ .tb{padding-inline:14px}.tb-actions{gap:4px}
+ .sb,html[dir=ltr] .sb{width:min(300px,calc(100vw - 32px));transform:translateX(calc(100% + 32px));visibility:hidden;transition:transform .24s ease,visibility .24s}
+ html[dir=ltr] .sb{transform:translateX(calc(-100% - 32px))}
+ .sb.open,html[dir=ltr] .sb.open{transform:translateX(0);visibility:visible}
+ .main,html[dir=ltr] .main{margin-inline:0}
+ .tb-actions [data-directory]{display:none!important}
+}
+@media(max-width:560px){
+ :root{--top-h:108px;--shell-gap:10px}
+ .tb{height:var(--top-h);align-content:center;flex-wrap:wrap;gap:2px;padding:4px 12px}
+ .tb-brand{width:100%;font-size:16px;min-width:0}.tb-actions{width:100%;justify-content:flex-end;flex-wrap:nowrap}
+ .tb-btn{padding:6px 10px}.tb-actions .tb-btn:not(.danger){display:inline-flex}
+ .kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.row2{grid-template-columns:1fr}
+ .quick-actions a{width:100%}.home{padding:18px 14px}
+}
+@media(min-width:1101px){.sb-overlay.show{display:none}}
+@media(prefers-reduced-motion:reduce){.sb{transition:none!important}}
+@media print{.main,html[dir=ltr] .main{margin:0;height:auto}.home{container-type:normal}}

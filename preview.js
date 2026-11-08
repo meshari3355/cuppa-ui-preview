@@ -89,5 +89,7 @@ document.getElementById('themeBtn').onclick=()=>document.body.classList.toggle('
 document.getElementById('cancelDialog').onclick=()=>dialog.close();
 document.getElementById('simulate').onclick=()=>{dialog.close();notify(t('تمت المحاكاة فقط — لم يتغير النظام الحقيقي','Simulation only — the real system is unchanged','শুধু নমুনা — আসল সিস্টেম অপরিবর্তিত'))};
 window.addEventListener('hashchange',()=>{const id=decodeURIComponent(location.hash.slice(1)||'home');if(id!==current)navigate(id)});
-document.addEventListener('keydown',e=>{if(e.key==='Escape')toggleMenu(false);if((e.ctrlKey||e.metaKey)&&e.key==='k'){e.preventDefault();if(innerWidth<=880)toggleMenu(true);document.getElementById('sbSearch').focus()}});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')toggleMenu(false);if((e.ctrlKey||e.metaKey)&&e.key==='k'){e.preventDefault();if(innerWidth<=1100)toggleMenu(true);document.getElementById('sbSearch').focus()}});
 current=decodeURIComponent(location.hash.slice(1)||'home');render();
+
+window.matchMedia('(max-width:1100px)').addEventListener('change',()=>toggleMenu(false));
