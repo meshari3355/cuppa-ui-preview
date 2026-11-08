@@ -5,7 +5,7 @@ const browser=await chromium.launch();
 const page=await browser.newPage({viewport:{width:1440,height:1000}});
 const errors=[];page.on('pageerror',e=>errors.push(e.message));
 await page.goto('http://127.0.0.1:8080');
-await page.waitForSelector('.module-tile');
+await page.waitForSelector('.module-tile',{state:'attached'});
 const catalog=JSON.parse(fs.readFileSync('navigation.json','utf8'));
 assert.equal(await page.locator('.module-tile').count(),45);
 for(const item of catalog){
