@@ -13,7 +13,7 @@ function translate(s,target){
  if(key){value=target==='ar'?key:entries[key][target];return value?s.replace(s.trim(),value):s}
  if(target==='ar')return s;
  /* Phrase boundaries prevent translating substrings inside unrelated words. */
- return s.replace(/[\u0600-\u06ff]+(?:[ \t]+[\u0600-\u06ff]+)*/g,function(part){
+ return s.replace(/ر\.س\.?/g,target==='en'?'SAR':'রিয়াল').replace(/[\u0600-\u06ff]+(?:[ \t]+[\u0600-\u06ff]+)*/g,function(part){
   var row=entries[normalize(part)];return row&&row[target]?row[target]:part;
  });
 }
