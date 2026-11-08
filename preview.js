@@ -6,11 +6,11 @@ const operations={};
 const workerPages=['my_tasks','inventory','daily_closing','add_invoice','component_orders','receive_order','messages','design_settings'];
 const screen=document.getElementById('screen'),nav=document.getElementById('navigation'),dialog=document.getElementById('demoDialog');
 let role='manager',current='home',language='ar',completed=new Set(),toastTimer;
-const t=(ar,en,bn)=>language==='en'?en:language==='bn'?bn:ar;
+const t=(ar,en,bn)=>ar;
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const en=['My tasks','Task management','Daily inventory','Daily closing','Upload invoice','Inventory periods','Active inventory','Inventory review','Ingredient prices','Kitchen lab','Replenishment orders','Receive goods','Suppliers','Products and costing','Sales analysis','Marketing and influencers','Cash safes','Expenses','Prepayments','Closing review','Invoice review','Human resources','Employee loans','Assets','Licences','Messages','Digital archive','General settings','User management','Branches','WhatsApp notifications','Color themes','User layouts','Administrative forms','Branch contracts','Monthly obligations','Monthly PDF report','Add monthly expense','Scheduled report','Export schema','System logs','Translations','Add mixture','Menu pricing','Kitchen ingredients'];
 const bn=['আমার কাজ','কাজ পরিচালনা','দৈনিক মজুত','দৈনিক হিসাব বন্ধ','চালান আপলোড','মজুতের সময়কাল','বর্তমান মজুত','মজুত পর্যালোচনা','উপকরণের দাম','রান্নাঘর','পুনরায় অর্ডার','পণ্য গ্রহণ','সরবরাহকারী','পণ্যের খরচ','বিক্রয় বিশ্লেষণ','বিপণন','নগদ তহবিল','ব্যয়','অগ্রিম','হিসাব পর্যালোচনা','চালান পর্যালোচনা','কর্মী ব্যবস্থাপনা','কর্মীর ঋণ','সম্পদ','লাইসেন্স','বার্তা','আর্কাইভ','সেটিংস','ব্যবহারকারী','শাখা','হোয়াটসঅ্যাপ','রঙের থিম','বিন্যাস','প্রশাসনিক ফর্ম','শাখার চুক্তি','মাসিক দায়','মাসিক রিপোর্ট','মাসিক ব্যয়','নির্ধারিত রিপোর্ট','কাঠামো রপ্তানি','সিস্টেম লগ','অনুবাদ','মিশ্রণ যোগ','মেনুর মূল্য','রান্নাঘরের উপকরণ'];
-function label(item){const i=catalog.indexOf(item);return language==='en'?en[i]:language==='bn'?bn[i]:item.label}
+function label(item){return item.label}
 function visible(){return role==='manager'?catalog:catalog.filter(x=>workerPages.includes(x.id))}
 function toggleMenu(force){const sb=document.getElementById('sbNav');const open=typeof force==='boolean'?force:!sb.classList.contains('open');sb.classList.toggle('open',open);document.getElementById('sbOverlay').classList.toggle('show',open);document.querySelector('.tb-toggle').setAttribute('aria-expanded',String(open))}
 function notify(message){const el=document.getElementById('toast');el.textContent=message;el.hidden=false;clearTimeout(toastTimer);toastTimer=setTimeout(()=>el.hidden=true,4200)}
@@ -117,7 +117,7 @@ document.addEventListener('click',e=>{
  if(link){e.preventDefault();const id=link.dataset.open;if(visible().some(x=>x.id===id)){location.hash=encodeURIComponent(id);navigate(id)}return}
  if(e.target.closest('[data-home]')){e.preventDefault();location.hash='home';navigate('home');return}
  if(action){openDialog(action.dataset.action);return}
- if(lang){language=lang.dataset.language;document.documentElement.lang=language;document.documentElement.dir=language==='ar'?'rtl':'ltr';render();return}
+ if(lang){language=lang.dataset.language;window.CuppaI18n.setLanguage(language);return}
  const sec=e.target.closest('.sb-sec-head');if(sec){const collapsed=sec.parentNode.classList.toggle('collapsed');sec.setAttribute('aria-expanded',String(!collapsed))}
 });
 document.getElementById('sbSearch').addEventListener('input',e=>{const q=e.target.value.trim().toLowerCase();let count=0;nav.querySelectorAll('.sb-sec').forEach(sec=>{let any=false;sec.querySelectorAll('.sb-link').forEach(a=>{a.hidden=!a.textContent.toLowerCase().includes(q);if(!a.hidden){count++;any=true}});sec.hidden=!any;if(q&&any){sec.classList.remove('collapsed');sec.querySelector('button').setAttribute('aria-expanded','true')}});document.getElementById('noResult').hidden=count>0});
