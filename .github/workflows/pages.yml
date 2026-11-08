@@ -34,9 +34,10 @@ jobs:
             manager-ipad.png
       - run: |
           mkdir site
-          cp index.html base.css cuppa-shell.css preview.css preview.js navigation.json .nojekyll site/
-          test "$(find site -type f | wc -l)" = "7"
+          cp index.html base.css cuppa-shell.css preview.css preview.js navigation.json i18n-catalog.js i18n-runtime.js .nojekyll site/
+          test "$(find site -type f | wc -l)" = "9"
           test -z "$(find site -name '*.php' -o -name '*.sql' -o -name '*.env')"
+      - run: PREVIEW_ROOT=site node tests/i18n.mjs
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
