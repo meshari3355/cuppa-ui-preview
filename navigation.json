@@ -1,0 +1,272 @@
+[
+  {
+    "id": "my_tasks",
+    "label": "مهامي",
+    "group": "المهام والإشعارات",
+    "icon": "fa-list-check"
+  },
+  {
+    "id": "admin_tasks",
+    "label": "إدارة المهام والإشعارات",
+    "group": "المهام والإشعارات",
+    "icon": "fa-bullhorn"
+  },
+  {
+    "id": "inventory",
+    "label": "الجرد اليومي",
+    "group": "العمليات اليومية",
+    "icon": "fa-clipboard-list"
+  },
+  {
+    "id": "daily_closing",
+    "label": "الإغلاق اليومي",
+    "group": "العمليات اليومية",
+    "icon": "fa-cash-register"
+  },
+  {
+    "id": "add_invoice",
+    "label": "رفع فاتورة",
+    "group": "العمليات اليومية",
+    "icon": "fa-file-invoice-dollar"
+  },
+  {
+    "id": "inventory_periods",
+    "label": "جرد الفترة",
+    "group": "المخزون",
+    "icon": "fa-calendar-week"
+  },
+  {
+    "id": "active_inventory",
+    "label": "الجرد النشط",
+    "group": "المخزون",
+    "icon": "fa-warehouse"
+  },
+  {
+    "id": "inventory_review",
+    "label": "مراجعة الجرد",
+    "group": "المخزون",
+    "icon": "fa-magnifying-glass-chart"
+  },
+  {
+    "id": "manage_prices",
+    "label": "تسعير المكونات",
+    "group": "المخزون",
+    "icon": "fa-tags"
+  },
+  {
+    "id": "kitchen_lab",
+    "label": "مختبر الخلطات",
+    "group": "المخزون",
+    "icon": "fa-flask"
+  },
+  {
+    "id": "component_orders",
+    "label": "طلبات النواقص",
+    "group": "الطلبات والموردون",
+    "icon": "fa-clipboard-check"
+  },
+  {
+    "id": "receive_order",
+    "label": "استلام البضائع",
+    "group": "الطلبات والموردون",
+    "icon": "fa-truck-ramp-box"
+  },
+  {
+    "id": "suppliers_management",
+    "label": "الموردون",
+    "group": "الطلبات والموردون",
+    "icon": "fa-handshake"
+  },
+  {
+    "id": "product_costing",
+    "label": "تكاليف المنتجات",
+    "group": "المنتجات والمبيعات",
+    "icon": "fa-calculator"
+  },
+  {
+    "id": "profit_analysis",
+    "label": "تحليل المبيعات",
+    "group": "المنتجات والمبيعات",
+    "icon": "fa-chart-line"
+  },
+  {
+    "id": "marketers",
+    "label": "المسوقون والمؤثرون",
+    "group": "التسويق والمؤثرون",
+    "icon": "fa-users-rectangle"
+  },
+  {
+    "id": "safe_management",
+    "label": "الخزائن",
+    "group": "المالية",
+    "icon": "fa-vault"
+  },
+  {
+    "id": "expenses_management",
+    "label": "المصاريف",
+    "group": "المالية",
+    "icon": "fa-money-bill-trend-up"
+  },
+  {
+    "id": "prepayments",
+    "label": "الدفعات المقدمة",
+    "group": "المالية",
+    "icon": "fa-hand-holding-dollar"
+  },
+  {
+    "id": "review_closings",
+    "label": "مراجعة الإغلاقات",
+    "group": "المالية",
+    "icon": "fa-receipt"
+  },
+  {
+    "id": "review_invoices",
+    "label": "مراجعة الفواتير",
+    "group": "المالية",
+    "icon": "fa-file-invoice"
+  },
+  {
+    "id": "hr_management",
+    "label": "إدارة الموظفين",
+    "group": "الموظفون",
+    "icon": "fa-user-tie"
+  },
+  {
+    "id": "employee_loans",
+    "label": "سلف الموظفين",
+    "group": "الموظفون",
+    "icon": "fa-hand-holding-usd"
+  },
+  {
+    "id": "assets_management",
+    "label": "الأصول",
+    "group": "الأصول والتراخيص",
+    "icon": "fa-couch"
+  },
+  {
+    "id": "licenses_permits",
+    "label": "التراخيص",
+    "group": "الأصول والتراخيص",
+    "icon": "fa-id-card"
+  },
+  {
+    "id": "messages",
+    "label": "الرسائل الداخلية",
+    "group": "التواصل والأرشيف",
+    "icon": "fa-envelope"
+  },
+  {
+    "id": "archive",
+    "label": "الأرشيف الرقمي",
+    "group": "التواصل والأرشيف",
+    "icon": "fa-box-archive"
+  },
+  {
+    "id": "settings",
+    "label": "الإعدادات العامة",
+    "group": "الإعدادات",
+    "icon": "fa-sliders"
+  },
+  {
+    "id": "manage_users",
+    "label": "إدارة المستخدمين",
+    "group": "الإعدادات",
+    "icon": "fa-user-gear"
+  },
+  {
+    "id": "branch_management",
+    "label": "إدارة الفروع",
+    "group": "الإعدادات",
+    "icon": "fa-store"
+  },
+  {
+    "id": "whatsapp_settings",
+    "label": "إعدادات الواتساب",
+    "group": "الإعدادات",
+    "icon": "fa-whatsapp"
+  },
+  {
+    "id": "design_settings",
+    "label": "ثيم الألوان",
+    "group": "الإعدادات",
+    "icon": "fa-palette"
+  },
+  {
+    "id": "dashboard_layout_admin",
+    "label": "تخطيطات المستخدمين",
+    "group": "الإعدادات",
+    "icon": "fa-puzzle-piece"
+  },
+  {
+    "id": "admin_forms",
+    "label": "نماذج إدارية",
+    "group": "الموظفون",
+    "icon": "fa-file-lines"
+  },
+  {
+    "id": "branch_contracts",
+    "label": "عقود وإيجارات الفروع",
+    "group": "الالتزامات والعقود",
+    "icon": "fa-file-contract"
+  },
+  {
+    "id": "monthly_obligations",
+    "label": "الالتزامات الشهرية",
+    "group": "الالتزامات والعقود",
+    "icon": "fa-scale-balanced"
+  },
+  {
+    "id": "monthly_report",
+    "label": "تقرير الالتزامات (PDF)",
+    "group": "الالتزامات والعقود",
+    "icon": "fa-file-pdf"
+  },
+  {
+    "id": "add_monthly_expense",
+    "label": "إضافة مصروف شهري",
+    "group": "الالتزامات والعقود",
+    "icon": "fa-plus"
+  },
+  {
+    "id": "monthly_report_cron",
+    "label": "إرسال تقرير الشهر تلقائيًا",
+    "group": "الالتزامات والعقود",
+    "icon": "fa-paper-plane"
+  },
+  {
+    "id": "export_template",
+    "label": "تصدير هيكل النظام",
+    "group": "الإعدادات",
+    "icon": "fa-file-export"
+  },
+  {
+    "id": "system_logs",
+    "label": "سجلات النظام",
+    "group": "الإعدادات",
+    "icon": "fa-clock-rotate-left"
+  },
+  {
+    "id": "translations_admin",
+    "label": "إدارة الترجمات",
+    "group": "الإعدادات",
+    "icon": "fa-language"
+  },
+  {
+    "id": "kitchen_lab?tab=add",
+    "label": "إضافة خليط جديد",
+    "group": "المطبخ",
+    "icon": "fa-plus"
+  },
+  {
+    "id": "kitchen_lab?tab=pricing",
+    "label": "تكلفة المنيو والتسعير",
+    "group": "المطبخ",
+    "icon": "fa-calculator"
+  },
+  {
+    "id": "kitchen_lab?tab=ingredients",
+    "label": "أسعار مكونات المطبخ",
+    "group": "المطبخ",
+    "icon": "fa-tags"
+  }
+]
